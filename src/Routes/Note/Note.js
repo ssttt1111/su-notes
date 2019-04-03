@@ -18,7 +18,23 @@ const Title = styled.h1`
   padding: 0;
 `;
 
-const Button = styled.button``;
+const ButtonContainer = styled.div``;
+
+const Button = styled.button`
+  background-color: #3486db;
+  color: white;
+  padding: 7px;
+  border-radius: 5px;
+  border: 2px solid rgba(0, 0, 0, 0.2);
+  box-shadow: 2px 3px 5px rgba(0, 0, 0, 0.6);
+  transition: opacity 0.2s ease-in-out;
+  :first-child {
+    margin-right: 10px;
+  }
+  :nth-child(2) {
+    background-color: red;
+  }
+`;
 
 export default class Note extends React.Component {
   render() {
@@ -34,9 +50,12 @@ export default class Note extends React.Component {
             <>
               <TitleComponent>
                 <Title>{data.note && data.note.title}</Title>
-                <Link to={`/edit/${data.note.id}`}>
-                  <Button>Edit</Button>
-                </Link>
+                <ButtonContainer>
+                  <Link to={`/edit/${data.note.id}`}>
+                    <Button>Edit</Button>
+                  </Link>
+                  <Button>Delete</Button>
+                </ButtonContainer>
               </TitleComponent>
               <MarkdownRenderer markdown={data.note.content} />
             </>
