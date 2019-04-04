@@ -43,7 +43,7 @@ const Notes = styled.div`
 const Note = styled.div`
   padding: 10px;
   padding-left: 5px;
-  transition: background-color 0.1s linear;
+  transition: background-color 0.2s linear;
   cursor: pointer;
   border-radius: 5px;
   margin-bottom: 10px;
@@ -54,6 +54,7 @@ const Note = styled.div`
 
 const NoteTitle = styled.span`
   padding-bottom: 5px;
+  margin-right: 10px;
   font-weight: 600;
   font-size: 20px;
 `;

@@ -33,7 +33,15 @@ const TitleContainer = styled.div`
   margin-bottom: 50px;
 `;
 
-const Button = styled.button``;
+const Button = styled.button`
+  height: 100%;
+  background-color: #3486db;
+  color: white;
+  padding: 7px;
+  border-radius: 5px;
+  border: 2px solid rgba(0, 0, 0, 0.2);
+  box-shadow: 2px 3px 5px rgba(0, 0, 0, 0.6);
+`;
 
 export default class Editor extends React.Component {
   constructor(props) {
